@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ramez-craft</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="game-header">
+        <a href="index.html" class="game-logo-link">
+            <img src="assets/images/minecraft-logo.png" alt="Minecraft" class="game-logo">
+        </a>
+
+        <button type="button" class="reset-button">
+            Reset World
+        </button>
+    </header>
+
+    <main class="game-layout">
+
+        <aside class="toolbar">
+            <h2>Tools</h2>
+
+            <button type="button" class="tool" data-tool="axe" aria-label="Select axe">
+                <img src="assets/images/axe.jpg" alt="" class="tool-icon">
+
+                <span>Axe</span>
+            </button>
+
+            <button type="button" class="tool" data-tool="pickaxe" aria-label="Select pickaxe">
+                <img src="assets/images/pickaxe.jpg" alt="" class="tool-icon">
+
+                <span>Pickaxe</span>
+            </button>
+
+            <button type="button" class="tool" data-tool="shovel" aria-label="Select shovel">
+                <img src="assets/images/shovel.jpg" alt="" class="tool-icon">
+
+                <span>Shovel</span>
+            </button>
+        </aside>
+
+        <section class="world-section">
+            <h2>World</h2>
+
+            <div class="world"></div>
+        </section>
+
+        <aside class="inventory-section">
+            <h2>Inventory</h2>
+
+            <div class="inventory"></div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

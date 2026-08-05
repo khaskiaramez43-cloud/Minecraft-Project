@@ -1,0 +1,517 @@
+/* =========================
+   General Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   Landing Page
+========================= */
+
+.landing-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #ffffff;
+    background-color: #202020;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.landing-logo {
+    display: block;
+    width: min(100%, 620px);
+    height: auto;
+    margin: 0 auto 22px;
+    image-rendering: pixelated;
+    filter: drop-shadow(6px 7px 0 rgba(0, 0, 0, 0.65));
+}
+
+.game-logo-link {
+    display: block;
+    line-height: 0;
+}
+
+.game-logo {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.landing-header {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.landing-header p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.landing-content {
+    width: min(100%, 1000px);
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 4px solid #3b3b3b;
+    border-radius: 12px;
+}
+
+.landing-logo {
+    display: block;
+    width: min(100%, 620px);
+    height: auto;
+    margin: 0 auto 22px;
+    image-rendering: pixelated;
+    filter: drop-shadow(6px 7px 0 rgba(0, 0, 0, 0.65));
+}
+
+.game-logo-link {
+    display: block;
+    line-height: 0;
+}
+
+.game-logo {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.tutorial-section h2,
+.tools-guide h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.tutorial-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tutorial-section>h2 {
+    grid-column: 1 / -1;
+}
+
+.tutorial-card {
+    padding: 20px;
+    background-color: #5b5b5b;
+    border: 4px solid #2d2d2d;
+    box-shadow: inset 0 0 0 2px #8b8b8b;
+}
+
+.tutorial-card h3 {
+    margin-bottom: 10px;
+    color: #f5d442;
+}
+
+.tutorial-card p {
+    line-height: 1.6;
+}
+
+.tools-guide {
+    margin-top: 35px;
+}
+
+.tools-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.tools-list li {
+    flex: 1;
+    padding: 18px;
+    text-align: center;
+    background-color: #6f4e37;
+    border: 4px solid #3c291e;
+}
+
+.start-button {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 16px 35px;
+    color: #ffffff;
+    background-color: #4caf50;
+    border: 4px solid #245c27;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 6px 0 #1e4620;
+    transition: transform 0.2s ease;
+}
+
+.start-button:hover {
+    transform: translateY(-3px);
+}
+
+.start-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #1e4620;
+}
+
+
+/* =========================
+   Game Page
+========================= */
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    color: #ffffff;
+    background-color: #202020;
+    border-bottom: 5px solid #4caf50;
+}
+
+.reset-button {
+    padding: 12px 20px;
+    color: #ffffff;
+    background-color: #b3261e;
+    border: 3px solid #6f1510;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.reset-button:hover {
+    background-color: #d0342c;
+}
+
+.game-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    min-height: calc(100vh - 81px);
+    background-color: #181818;
+}
+
+.toolbar,
+.inventory-section {
+    padding: 25px 18px;
+    color: #ffffff;
+    background-color: #292929;
+}
+
+.toolbar {
+    border-right: 4px solid #444444;
+}
+
+.inventory-section {
+    border-left: 4px solid #444444;
+}
+
+.toolbar h2,
+.inventory-section h2,
+.world-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.world-section {
+    padding: 25px;
+    overflow: auto;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at center,
+            #383838 0%,
+            #171717 75%);
+}
+
+.world {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    width: fit-content;
+    margin: 0 auto;
+
+    background-color: #75c7f0;
+    background-image: url("assets/images/sky.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 6px solid;
+    border-color: #777777 #202020 #202020 #777777;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.55),
+        0 0 0 4px #101010;
+}
+
+.world.wrong-action {
+    animation: wrong-action 0.3s ease;
+}
+
+@keyframes wrong-action {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tile-sky {
+    background-color: transparent;
+    background-image: none;
+}
+
+.tile-grass {
+    background-color: #5f9d36;
+    background-image: url("assets/images/grass.png");
+}
+
+.tile-dirt {
+    background-color: #765136;
+    background-image: url("assets/images/dirt.jpg");
+}
+
+.tile-rock {
+    background-color: #747474;
+    background-image: url("assets/images/rock.jpg");
+}
+
+.tile-tree {
+    background-color: #467a37;
+    background-image: url("assets/images/leaves.png");
+}
+
+.tile-trunk {
+    background-color: #8b5a2b;
+    background-image: url("assets/images/trunk.jpg");
+}
+
+.tile:focus-visible {
+    position: relative;
+    z-index: 2;
+    outline: 4px solid #ffeb3b;
+    outline-offset: -4px;
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px;
+    color: #ffffff;
+    background-color: #4b4b4b;
+    border: 4px solid;
+    border-color: #777777 #252525 #252525 #777777;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    image-rendering: pixelated;
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.tool:hover {
+    filter: brightness(1.18);
+    transform: translateY(-2px);
+}
+
+.tool:active {
+    border-color: #252525 #777777 #777777 #252525;
+    transform: translateY(1px);
+}
+
+.tool.selected {
+    color: #1d1d1d;
+    background-color: #8bc34a;
+    border-color: #d4ff9e #3d681d #3d681d #d4ff9e;
+    box-shadow: 0 0 14px rgba(139, 195, 74, 0.85);
+}
+
+.tool-icon {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+.inventory-item.tile-tree,
+.inventory-item.tile-trunk,
+.inventory-item.tile-rock,
+.inventory-item.tile-dirt,
+.inventory-item.tile-grass {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    align-content: start;
+    justify-content: center;
+    gap: 12px;
+    min-height: 300px;
+    padding: 12px;
+    background-color: #181818;
+    border: 4px solid #3f3f3f;
+}
+
+.inventory-item {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 4px solid #555;
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    image-rendering: pixelated;
+}
+
+.inventory-item:hover {
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.inventory-item.selected {
+    border-color: #f5d442;
+    box-shadow: 0 0 12px rgba(245, 212, 66, 0.9);
+    transform: scale(1.05);
+}
+
+.inventory-count {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    display: grid;
+    place-items: center;
+    min-width: 25px;
+    height: 25px;
+    padding: 2px 6px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.inventory-name {
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+    max-width: 48px;
+    padding: 2px 4px;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.78);
+    font-size: 10px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 850px) {
+    .tutorial-section {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-list {
+        flex-direction: column;
+    }
+
+    .game-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar,
+    .inventory-section {
+        border: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .landing-header h1 {
+        font-size: 42px;
+    }
+
+    .landing-content {
+        padding: 20px;
+    }
+
+    .game-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* If an image file is missing, the background color still keeps the game usable. */
+.tool-icon {
+    font-size: 0;
+}
+
+.tool-icon[src=""],
+.tool-icon:not([src]) {
+    display: none;
+}
+
